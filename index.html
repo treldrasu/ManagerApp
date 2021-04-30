@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- my style -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Ade Manager App</title>
+  </head>
+  <body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script language="javascript" type="text/javascript" src="./js/script.js"></script>
+
+    <header class="bg-dark mb-5 row align-items-center">
+        <div class="logo col text-center">
+            <h1>Manager App</h1>
+        </div>
+        <div class="menu col">
+            <nav class="nav">
+                <a class="nav-link active" href="#">Active</a>
+                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </nav>
+
+        </div>
+    </header>
+    
+    <main id="content" class="container">
+        <aside id="sidebar">
+    
+        </aside>
+        
+        <div class="card">
+            <div class="card-body">
+                <form>
+                    <div class="form-group row">
+                      <label for="saison" class="col-2 col-form-label">Saison</label> 
+                      <div class="col-6">
+                        <input id="saison" name="saison" placeholder="1 Saison" type="text" class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="team_logo" class="col-2 col-form-label">Team Logo</label> 
+                      <div class="col-6">
+                        <div class="input-group">
+                          <input id="team_logo" name="team_logo" placeholder="C:/" type="file" class="form-control-file">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="color_style" class="col-2 col-form-label">Farbe</label> 
+                      <div class="col-6">
+                        <div class="input-group">
+                            <input type="color" id="color_style" name="color_style" value="#000000">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="mannschaft-background" class="col-2 col-form-label">Hintergrundbild</label> 
+                      <div class="col-6">
+                        <div class="input-group">
+                          <input id="mannschaft-background" name="mannschaft-background" placeholder="\img\rassen.jpg" type="file" class="form-control-file">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="formation" class="col-2 col-form-label">Formation</label> 
+                      <div class="col-6">
+                        <select id="formation" name="formation" required="required" class="custom-select">
+                          <option value="" disabled selected >Select Formation</option>
+                          <option value="2-4-4">4-4-2</option>
+                          <option value="3-3-4">4-3-3</option>
+                          <option value="3-4-3">3-4-3</option>
+                          <option value="2-5-3">3-5-2</option>
+                          <option value="1-5-4">4-5-1</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="liga_logo" class="col-2 col-form-label">Liga Logo</label> 
+                      <div class="col-6">
+                        <div class="input-group">
+                          <input id="liga_logo" name="liga_logo" placeholder="C: Pfad" type="file" class="form-control-file">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="background" class="col-2 col-form-label">Hintergrund</label> 
+                      <div class="col-6">
+                        <div class="input-group">
+                          <input id="background" name="background" placeholder="C: Pfad" type="file" class="form-control-file">
+                        </div>
+                      </div>
+                    </div> 
+                    <!-- <div class="form-group row">
+                      <div class="col-auto mt-3">
+                        <button name="submit" type="submit" class="btn btn-primary">Mannschaft Anlegen</button>
+                      </div>
+                    </div> -->
+                  </form>
+            </div>
+        </div>
+    </main>
+
+    <div id="helper" class="d-none">
+        <!-- zum clonen -->
+
+        <!-- Spieler Casten -->
+        <div id="player-container-helper" class="col-auto player-container">
+            <div class="player">
+                <img class="player-pic" src="" alt="player">
+                <input type="text" class="color_style" placeholder="Name" />
+            </div>
+        </div>
+
+        <!-- Spieler reihe -->
+        <div class="row justify-content-center no-gutters"></div>
+
+        <div id="clone-container"></div>
+    </div>
+
+    <div id="img-container" class="container">
+        <div id="bg-img" class="row p-3 align-items-center">
+            <div id="feld-container" class="col">
+                <div class="p-abs saison" ><span id="ph_saison">1. Saison</span></div>
+                <div class="p-abs team-logo color_style"></div>
+                <div class="p-abs liga-logo"></div>
+                <div class="p-abs formation d-none">
+                    <!-- helper clont hier rein -->
+
+                    <!-- torwart ist überall geleich -->
+                    <div class="row justify-content-center no-gutters">
+                        <div class="col-auto player-container">
+                            <div class="player">
+                                <img class="player-pic" src="" alt="torwart">
+                                <input type="text" class="color_style" placeholder="Name" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+  </body>
+</html>
