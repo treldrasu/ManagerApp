@@ -41,12 +41,18 @@ form > .row {
   top: 30px;
   left: 38px;
 }
+#img-container #bg-img #feld-container .p-abs.team-logo img {
+  max-height: 70px;
+}
 #img-container #bg-img #feld-container .p-abs.liga-logo {
   background-color: transparent;
   height: 85px;
   width: 85px;
   right: 35px;
   bottom: 25px;
+}
+#img-container #bg-img #feld-container .p-abs.liga-logo img {
+  max-height: 70px;
 }
 #img-container #bg-img #feld-container .p-abs.formation {
   width: 1000px;
@@ -58,15 +64,18 @@ form > .row {
 #img-container #bg-img #feld-container .p-abs.formation .player-container {
   max-width: 180px;
   height: 100px !important;
-  background-color: lightgray;
+  background-color: #d3d3d35e;
   margin: 10px;
 }
 #img-container #bg-img #feld-container .p-abs.formation .player-container .player {
   display: flex;
   flex-direction: column;
 }
-#img-container #bg-img #feld-container .p-abs.formation .player-container .player img {
+#img-container #bg-img #feld-container .p-abs.formation .player-container .player .player-pic-wrapper {
   height: 80px;
+}
+#img-container #bg-img #feld-container .p-abs.formation .player-container .player .player-pic-wrapper img {
+  max-height: 80px;
 }
 #img-container #bg-img #feld-container .p-abs.formation .player-container .player input {
   background-color: #000000;

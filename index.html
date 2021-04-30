@@ -51,10 +51,10 @@
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label for="team_logo" class="col-2 col-form-label">Team Logo</label> 
+                      <label for="team-logo" class="col-2 col-form-label">Team Logo</label> 
                       <div class="col-6">
                         <div class="input-group">
-                          <input id="team_logo" name="team_logo" placeholder="C:/" type="file" class="form-control-file">
+                          <input id="team-logo" name="team-logo" placeholder="C:/" type="file" class="form-control-file img-file">
                         </div>
                       </div>
                     </div>
@@ -70,7 +70,7 @@
                       <label for="mannschaft-background" class="col-2 col-form-label">Hintergrundbild</label> 
                       <div class="col-6">
                         <div class="input-group">
-                          <input id="mannschaft-background" name="mannschaft-background" placeholder="\img\rassen.jpg" type="file" class="form-control-file">
+                          <input id="mannschaft-background" name="mannschaft-background" placeholder="\img\rassen.jpg" type="file" class="form-control-file img-file-bg">
                         </div>
                       </div>
                     </div>
@@ -88,26 +88,13 @@
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label for="liga_logo" class="col-2 col-form-label">Liga Logo</label> 
+                      <label for="liga-logo" class="col-2 col-form-label">Liga Logo</label> 
                       <div class="col-6">
                         <div class="input-group">
-                          <input id="liga_logo" name="liga_logo" placeholder="C: Pfad" type="file" class="form-control-file">
+                          <input id="liga-logo" name="liga-logo" placeholder="C: Pfad" type="file" class="form-control-file img-file">
                         </div>
                       </div>
                     </div>
-                    <div class="form-group row">
-                      <label for="background" class="col-2 col-form-label">Hintergrund</label> 
-                      <div class="col-6">
-                        <div class="input-group">
-                          <input id="background" name="background" placeholder="C: Pfad" type="file" class="form-control-file">
-                        </div>
-                      </div>
-                    </div> 
-                    <!-- <div class="form-group row">
-                      <div class="col-auto mt-3">
-                        <button name="submit" type="submit" class="btn btn-primary">Mannschaft Anlegen</button>
-                      </div>
-                    </div> -->
                   </form>
             </div>
         </div>
@@ -115,15 +102,16 @@
 
     <div id="helper" class="d-none">
         <!-- zum clonen -->
-
         <!-- Spieler Casten -->
         <div id="player-container-helper" class="col-auto player-container">
             <div class="player">
-                <img class="player-pic" src="" alt="player">
+                <div class="player-pic-wrapper" onclick="changePlayerPic(this)">
+                  <input type="file" class="player-pic" accept="image/*" style="display:none">
+                  <img class="player-pic mx-auto d-block img-fluid" src="" alt="player" >
+                </div>
                 <input type="text" class="color_style" placeholder="Name" />
             </div>
         </div>
-
         <!-- Spieler reihe -->
         <div class="row justify-content-center no-gutters"></div>
 
@@ -134,18 +122,21 @@
         <div id="bg-img" class="row p-3 align-items-center">
             <div id="feld-container" class="col">
                 <div class="p-abs saison" ><span id="ph_saison">1. Saison</span></div>
-                <div class="p-abs team-logo color_style"></div>
-                <div class="p-abs liga-logo"></div>
+                <div class="p-abs team-logo color_style d-flex align-items-center"></div>
+                <div class="p-abs liga-logo d-flex align-items-center"></div>
                 <div class="p-abs formation d-none">
                     <!-- helper clont hier rein -->
 
                     <!-- torwart ist überall geleich -->
                     <div class="row justify-content-center no-gutters">
                         <div class="col-auto player-container">
-                            <div class="player">
-                                <img class="player-pic" src="" alt="torwart">
-                                <input type="text" class="color_style" placeholder="Name" />
+                          <div class="player">
+                            <div class="player-pic-wrapper" onclick="changePlayerPic(this)">
+                              <input type="file" class="player-pic" accept="image/*" style="display:none">
+                              <img class="player-pic mx-auto d-block img-fluid" src="" alt="torwart">
                             </div>
+                            <input type="text" class="color_style" placeholder="Name" />
+                          </div>
                         </div>
                     </div>
                 </div>

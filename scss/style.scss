@@ -48,6 +48,9 @@ form{
                     width: 97px;
                     top: 30px;
                     left: 38px;
+                    img{
+                        max-height: 70px;
+                    }
                 }
                 &.liga-logo{
                     background-color: transparent;
@@ -55,6 +58,9 @@ form{
                     width: 85px;
                     right: 35px;
                     bottom: 25px;
+                    img{
+                        max-height: 70px;
+                    }
                 }
 
                 &.formation{
@@ -67,14 +73,17 @@ form{
                     .player-container{
                         max-width: 180px;
                         height: 100px !important;
-                        background-color: lightgray;
+                        background-color: #d3d3d35e;
                         margin: 10px;
 
                         .player{
                             display: flex;
                             flex-direction: column;
-                            img{
+                            .player-pic-wrapper{
                                 height: 80px;
+                                img{
+                                    max-height: 80px;
+                                }
                             }
                             input{
                                 background-color: #000000;
