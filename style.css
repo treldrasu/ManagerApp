@@ -1,0 +1,78 @@
+body h1, body h2, body h3 {
+  color: white;
+}
+body span {
+  color: white;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+form > .row {
+  justify-content: center;
+}
+
+#img-container {
+  min-width: fit-content;
+  margin-top: 5rem;
+}
+#img-container #bg-img {
+  background-image: url(./img/fussball-rasen.jpg);
+  background-size: cover;
+}
+#img-container #bg-img #feld-container {
+  position: relative;
+  background-image: url(./img/Feld.png);
+  width: 1140px;
+  height: 641px;
+}
+#img-container #bg-img #feld-container .p-abs {
+  position: absolute;
+}
+#img-container #bg-img #feld-container .p-abs.saison {
+  top: 70px;
+  left: 142px;
+  background-color: transparent;
+}
+#img-container #bg-img #feld-container .p-abs.team-logo {
+  background-color: #000000;
+  height: 75px;
+  width: 97px;
+  top: 30px;
+  left: 38px;
+}
+#img-container #bg-img #feld-container .p-abs.liga-logo {
+  background-color: transparent;
+  height: 85px;
+  width: 85px;
+  right: 35px;
+  bottom: 25px;
+}
+#img-container #bg-img #feld-container .p-abs.formation {
+  width: 1000px;
+  height: 500px;
+  position: relative;
+  margin: auto;
+  top: 20%;
+}
+#img-container #bg-img #feld-container .p-abs.formation .player-container {
+  max-width: 180px;
+  height: 100px !important;
+  background-color: lightgray;
+  margin: 10px;
+}
+#img-container #bg-img #feld-container .p-abs.formation .player-container .player {
+  display: flex;
+  flex-direction: column;
+}
+#img-container #bg-img #feld-container .p-abs.formation .player-container .player img {
+  height: 80px;
+}
+#img-container #bg-img #feld-container .p-abs.formation .player-container .player input {
+  background-color: #000000;
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  border: none;
+}
